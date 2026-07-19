@@ -1,0 +1,536 @@
+{
+  "notes": [
+    [
+      "n1",
+      "2026.07.19",
+      "Field Note",
+      "환자 프리뷰는 요약 화면이 아니다",
+      "중요한 정보를 줄이는 것이 아니라, 지금 판단에 필요한 변화·위험·미완료 루프를 먼저 보여줘야 한다.",
+      [
+        "Delta Thinking",
+        "Clinical Priority"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "n2",
+      "2026.07.16",
+      "Field Note",
+      "델타가 리스트보다 먼저다",
+      "재진에서 전체 검사값보다 이전 대비 변화가 임상적 의미를 가진다.",
+      [
+        "Delta Thinking",
+        "Temporal Intelligence"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "How should longitudinal data change medicine?"
+      ]
+    ],
+    [
+      "n3",
+      "2026.07.11",
+      "Field Note",
+      "AI 문서화의 목표는 글쓰기 자동화가 아니다",
+      "반복 작업을 줄이면서 임상 사고와 의사결정의 추적 가능성을 보존해야 한다.",
+      [
+        "Agentic Workflow",
+        "Human Oversight"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "n4",
+      "2026.07.05",
+      "Research Note",
+      "환자 복잡성은 진단 개수로 측정되지 않는다",
+      "불확실성, 목표 충돌, 관리 부담과 사회적 맥락이 실제 복잡성을 만든다.",
+      [
+        "Clinical Complexity"
+      ],
+      [
+        "Clinical Complexity Lab"
+      ],
+      [
+        "Can AI understand clinical complexity?"
+      ]
+    ],
+    [
+      "n5",
+      "2026.06.28",
+      "Field Note",
+      "Continuous Care는 모니터링이 아니라 피드백 루프다",
+      "변화 감지, 해석, 행동, 실행과 결과 확인이 하나의 폐쇄 루프로 연결되어야 한다.",
+      [
+        "Continuous Care",
+        "Temporal Intelligence"
+      ],
+      [
+        "Continuous Care Intelligence"
+      ],
+      [
+        "How should longitudinal data change medicine?"
+      ]
+    ],
+    [
+      "n6",
+      "2026.06.20",
+      "Strategy Note",
+      "의료 AI 수출은 소프트웨어 번역이 아니다",
+      "임상 관행, 책임 구조, 병원 운영 모델까지 현지화해야 한다.",
+      [
+        "AI Native Healthcare",
+        "Human Oversight"
+      ],
+      [
+        "Global EMR Lab"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "n7",
+      "2026.06.14",
+      "Field Note",
+      "의료진 저항은 제품 신호일 수 있다",
+      "변화를 싫어한다고 보기 전에 새로 추가된 책임과 워크플로우 마찰을 살펴야 한다.",
+      [
+        "Clinical Priority",
+        "Human Oversight"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "n8",
+      "2026.06.07",
+      "Research Note",
+      "Longitudinal data의 핵심은 더 긴 데이터가 아니다",
+      "상태 전환, 치료 반응, 반복 패턴과 이상 변화를 표현할 수 있어야 한다.",
+      [
+        "Temporal Intelligence",
+        "Delta Thinking"
+      ],
+      [
+        "Continuous Care Intelligence"
+      ],
+      [
+        "How should longitudinal data change medicine?"
+      ]
+    ],
+    [
+      "n9",
+      "2026.05.29",
+      "Field Note",
+      "에이전트는 화면이 아니라 역할이다",
+      "업무 목표, 권한, 입력과 출력, 중단 조건과 책임 이관이 정의되어야 한다.",
+      [
+        "Agentic Workflow",
+        "Human Oversight"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "n10",
+      "2026.05.18",
+      "Strategy Note",
+      "제품과 논문은 다른 속도로 움직인다",
+      "현장 관찰이 연구 질문을 만들고 연구 결과가 제품 원칙으로 돌아오는 증거 루프가 필요하다.",
+      [
+        "Clinical Complexity"
+      ],
+      [
+        "Clinical Complexity Lab"
+      ],
+      [
+        "Can AI understand clinical complexity?"
+      ]
+    ],
+    [
+      "n11",
+      "2026.05.03",
+      "Field Note",
+      "의료 AI의 ROI는 시간 절감만이 아니다",
+      "인지 부담, 누락 위험, 조정 비용과 임상적 결정의 질까지 평가해야 한다.",
+      [
+        "Clinical Priority"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "n12",
+      "2026.04.20",
+      "Founding Note",
+      "왜 이 사이트를 living thesis로 운영하는가",
+      "AI Native Healthcare에 대한 장기 질문을 글, 개념, 프로젝트와 연구로 연결하기 위해서다.",
+      [
+        "AI Native Healthcare",
+        "Clinical Complexity"
+      ],
+      [
+        "Global EMR Lab"
+      ],
+      [
+        "Can AI understand clinical complexity?"
+      ]
+    ]
+  ],
+  "essays": [
+    [
+      "e1",
+      "2026.07.18",
+      "AI Native EMR",
+      "환자 프리뷰에서 시작하는 AI Native EMR",
+      "다음 세대 EMR은 정보를 더 보여주는 시스템이 아니라 변화와 위험을 먼저 이해시키는 시스템이어야 한다.",
+      "현재 EMR의 첫 화면은 데이터가 어디에 있는지를 보여주지만, 지금 무엇이 중요한지는 설명하지 않는다.\n\nAI Native EMR의 시작점은 생성형 기록보다 patient preview다. 진료 전 짧은 시간에 이전 이후의 변화, 놓치면 위험한 정보, 완료되지 않은 계획을 구조화해야 한다.\n\n전체 목록보다 delta, risk, open loop를 먼저 제시한다. AI는 정보를 숨기는 대신 우선순위의 이유를 설명해야 한다.",
+      [
+        "Delta Thinking",
+        "Clinical Priority"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "e2",
+      "2026.06.30",
+      "Agentic Medicine",
+      "의료 에이전트는 무엇을 맡아야 하는가",
+      "에이전트의 핵심은 대화 능력이 아니라 역할, 권한과 책임 이관 조건이다.",
+      "많은 의료 에이전트가 챗봇 인터페이스와 긴 답변에 머문다.\n\n임상 에이전트는 명확한 업무 목표, 제한된 권한, 사용 데이터, 출력과 중단 조건을 가져야 한다.\n\n누가 검토하고 승인하는지, 불확실성이 높을 때 누구에게 책임을 넘기는지가 제품 기능으로 구현되어야 한다.",
+      [
+        "Agentic Workflow",
+        "Human Oversight"
+      ],
+      [
+        "AI Native EMR"
+      ],
+      [
+        "Can EMR become a decision system?"
+      ]
+    ],
+    [
+      "e3",
+      "2026.06.15",
+      "Continuous Care",
+      "Continuous Care는 진료 사이의 시간을 설계하는 일이다",
+      "센서와 앱보다 중요한 것은 변화 감지부터 행동과 결과 확인까지 이어지는 피드백 루프다.",
+      "의료는 진료실 안에서는 정교하지만 진료 사이에는 단절된다.\n\nContinuous Care는 더 자주 측정하는 서비스가 아니라 변화 감지, 해석, 행동과 결과를 연결하는 시스템이다.\n\n환자 스스로 대응할 수 있는 변화, 코치가 개입할 변화, 의료진 판단이 필요한 변화를 분리해야 한다.",
+      [
+        "Continuous Care",
+        "Temporal Intelligence"
+      ],
+      [
+        "Continuous Care Intelligence"
+      ],
+      [
+        "How should longitudinal data change medicine?"
+      ]
+    ],
+    [
+      "e4",
+      "2026.05.25",
+      "Founding Essay",
+      "하나의 질문으로 커리어를 다시 읽기",
+      "임상, 병원 운영, 중국, 디지털 헬스케어와 AI 연구는 의료 복잡성을 작동하는 시스템으로 바꾸는 하나의 궤적이었다.",
+      "진료, 공공의료, 중국 국제병원, 디지털 헬스케어 제품과 AI EMR 개발은 서로 다른 이력처럼 보인다.\n\n그러나 각 단계에서 관심을 끈 것은 의료가 실제로 작동하거나 실패하는 방식이었다.\n\n앞으로의 박사 연구, 제품 개발, 글로벌 확장과 글쓰기는 하나의 질문을 서로 다른 방식으로 검증한다.",
+      [
+        "AI Native Healthcare",
+        "Clinical Complexity"
+      ],
+      [
+        "Global EMR Lab"
+      ],
+      [
+        "Can AI understand clinical complexity?"
+      ]
+    ]
+  ],
+  "concepts": [
+    [
+      "01",
+      "Core",
+      "AI Native Healthcare",
+      "기존 의료에 AI를 덧붙이는 대신 인간-AI 협업을 전제로 데이터·워크플로우·책임 구조를 다시 설계한다."
+    ],
+    [
+      "02",
+      "Developing",
+      "Continuous Care",
+      "진료 사이의 변화를 감지하고 해석해 행동과 결과 확인으로 연결하는 피드백 루프다."
+    ],
+    [
+      "03",
+      "Developing",
+      "Delta Thinking",
+      "전체 정보보다 이전 상태와 비교해 무엇이 달라졌는지를 먼저 이해한다."
+    ],
+    [
+      "04",
+      "Exploring",
+      "Temporal Intelligence",
+      "상태 전환, 치료 반응과 반복 패턴을 시간축에서 이해하는 능력이다."
+    ],
+    [
+      "05",
+      "Exploring",
+      "Agentic Workflow",
+      "명확한 역할과 제한된 권한을 가진 에이전트가 사람의 업무를 연결한다."
+    ],
+    [
+      "06",
+      "Developing",
+      "Clinical Priority",
+      "지금 환자에게 필요한 판단과 위험에 따라 정보의 우선순위를 정한다."
+    ],
+    [
+      "07",
+      "Exploring",
+      "Human Oversight",
+      "검토, 승인, 중단과 책임 이관을 제품 구조에 내장한다."
+    ],
+    [
+      "08",
+      "Research Agenda",
+      "Clinical Complexity",
+      "질환 수를 넘어 불확실성, 목표 충돌, 관리 부담과 사회적 맥락을 포함한다."
+    ]
+  ],
+  "projects": [
+    [
+      "p1",
+      "In development",
+      "AI Native EMR",
+      "AI Native EMR Clinical Workspace",
+      "환자 프리뷰, 델타 중심 비교, 문서화와 다음 행동을 하나의 임상 흐름으로 통합한다.",
+      "현재 EMR는 정보가 많지만 환자의 현재 상태와 변화, 미완료 업무를 빠르게 파악하기 어렵다.",
+      "Preview → Workspace → Documentation을 동일한 정보 모델과 에이전트 구조로 연결한다.",
+      "재진 델타 뷰와 open-loop 추적 프로토타입을 실제 사용자 흐름에서 검증한다."
+    ],
+    [
+      "p2",
+      "Concept validation",
+      "Continuous Care",
+      "Continuous Care Intelligence",
+      "CGM과 생활습관 데이터를 변화 패턴, 행동 제안과 의료진 개입 기준으로 변환한다.",
+      "연속 데이터가 늘어나도 환자와 의료진에게 의미 있는 다음 행동으로 연결되지 않는다.",
+      "반복 패턴, 변곡점과 치료 반응을 감지하고 환자 자가관리와 의료진 개입을 분리한다.",
+      "CGM 사례를 중심으로 행동 변화에 필요한 최소 정보 단위를 정의한다."
+    ],
+    [
+      "p3",
+      "Research design",
+      "Research & Global",
+      "Clinical Complexity & Global EMR Lab",
+      "박사 연구 의제와 한국·중국·동남아 EMR 확장 경험을 하나의 프로그램으로 연결한다.",
+      "임상 복잡성과 워크플로우는 국가별로 다르지만 제품과 연구에서 충분히 구조화되지 않았다.",
+      "Longitudinal EHR 연구, 현장 관찰과 다국어 워크플로우 비교를 결합한다.",
+      "박사 연구 질문을 구체화하고 해외 파일럿을 위한 공통 임상 레이어를 정의한다."
+    ]
+  ],
+  "research": [
+    [
+      "r1",
+      "Formulating",
+      20,
+      "AI는 환자의 임상 복잡성을 이해할 수 있는가?",
+      "Longitudinal EHR에서 불확실성, 목표 충돌과 관리 부담을 나타내는 신호를 추출하면 진단 개수보다 유용한 모델을 만들 수 있는가?",
+      "개념 정의 → 임상 라벨링 → longitudinal feature → 예측 및 설명 가능성 검증"
+    ],
+    [
+      "r2",
+      "Exploring",
+      30,
+      "EMR은 기록 시스템에서 의사결정 시스템으로 바뀔 수 있는가?",
+      "변화, 위험, 미완료 루프와 다음 행동을 중심으로 재구성하면 환자 파악 시간과 누락 위험을 줄일 수 있는가?",
+      "워크플로우 관찰 → 프로토타입 → 시뮬레이션 → 사용자 연구 → 안전성 평가"
+    ],
+    [
+      "r3",
+      "Exploring",
+      15,
+      "Longitudinal data는 진료 사이의 행동을 어떻게 바꿀 수 있는가?",
+      "상태 전환, 반복 패턴과 치료 반응을 보여주면 환자와 의료진이 더 적절한 시점에 행동할 수 있는가?",
+      "CGM 사례 분석 → temporal pattern → 행동 제안 → 행동 변화 평가"
+    ]
+  ],
+  "site": {
+    "meta": {
+      "title": "Mark Han — AI Native Healthcare",
+      "description": "Mark Han — AI Native Healthcare. Writing, ideas, research and field notes on how intelligence reshapes medicine.",
+      "language": "ko"
+    },
+    "brand": {
+      "name": "MARK HAN",
+      "subject": "AI Native Healthcare"
+    },
+    "nav": {
+      "home": "Home",
+      "journal": "Writing",
+      "framework": "Ideas",
+      "projects": "Work",
+      "research": "Research",
+      "about": "About",
+      "edit": "Edit",
+      "menu": "Menu",
+      "close": "Close",
+      "editContent": "Edit content"
+    },
+    "home": {
+      "overline": "MARK HAN · PHYSICIAN · BUILDER · RESEARCHER",
+      "title": "AI Native<br>Healthcare.",
+      "thesis": "I build systems that help medicine think.",
+      "intro": "AI를 기존 의료에 덧붙이는 것이 아니라, 인간과 AI의 협업을 전제로 데이터·워크플로우·책임 구조를 다시 설계합니다.",
+      "primaryButton": "Start reading",
+      "secondaryButton": "About Mark",
+      "currentLabel": "CURRENT THESIS · JULY 2026",
+      "currentTitle": "From record systems<br>to clinical intelligence.",
+      "currentText": "This site is my living thesis on AI Native Healthcare.",
+      "featuredLabel": "FEATURED ESSAY",
+      "latestLabel": "LATEST WRITING",
+      "allWriting": "View all writing →",
+      "centralLabel": "THE CENTRAL QUESTION",
+      "centralQuestion": "How can AI help healthcare understand complexity—not merely automate tasks?",
+      "centralText": "This question connects the writing, frameworks, products and research on this site.",
+      "themesLabel": "RESEARCH THEMES",
+      "notesLabel": "FIELD NOTES",
+      "notesTitle": "Small observations.<br>Ideas in motion.",
+      "notesText": "짧은 관찰은 에세이와 프레임워크, 그리고 실제 제품과 연구 질문으로 발전합니다.",
+      "timelineLabel": "A LONG ARC",
+      "closing": "A career is not a sequence of jobs.<br>It is a question refined over time."
+    },
+    "timeline": [
+      [
+        "2012",
+        "Digital health"
+      ],
+      [
+        "2016",
+        "China & hospital operations"
+      ],
+      [
+        "2022",
+        "AI Native EMR"
+      ],
+      [
+        "2027",
+        "PhD research"
+      ],
+      [
+        "2031",
+        "Healthcare intelligence"
+      ]
+    ],
+    "pages": {
+      "journal": {
+        "overline": "WRITING",
+        "title": "Ideas become clearer<br>when they are written.",
+        "description": "Field notes, essays and research reflections on AI, medicine and healthcare systems.",
+        "search": "Search writing",
+        "all": "All",
+        "essays": "Essays",
+        "notes": "Notes"
+      },
+      "framework": {
+        "overline": "IDEAS",
+        "title": "A vocabulary for<br>AI Native Healthcare.",
+        "description": "개념은 완성된 정의가 아니라 글, 제품과 연구를 연결하는 살아 있는 도구입니다."
+      },
+      "projects": {
+        "overline": "WORK",
+        "title": "Ideas tested<br>in the real world.",
+        "description": "프로젝트는 성공담이 아니라 문제, 가설, 프로토타입과 배운 점의 기록입니다."
+      },
+      "research": {
+        "overline": "RESEARCH",
+        "title": "From field experience<br>to testable questions.",
+        "description": "Longitudinal data, clinical complexity and AI-native workflows form the emerging research program."
+      },
+      "about": {
+        "overline": "ABOUT",
+        "title": "Physician.<br>Builder. Operator.<br>Researcher.",
+        "description": "I have spent my career at the boundary where clinical reality meets technology and systems."
+      }
+    },
+    "about": {
+      "paragraphs": [
+        "저는 의료의 복잡성을 단순화하는 사람이 아니라, 그 복잡성을 더 정확히 이해하고 다룰 수 있는 시스템을 만드는 사람입니다.",
+        "임상 진료와 공공의료에서 출발해 중국 국제병원 운영, 디지털 헬스케어 제품, 그리고 AI 기반 임상 시스템 개발까지 경험했습니다.",
+        "서로 다른 경력처럼 보이지만, 모든 단계에는 하나의 질문이 있었습니다. 의료 현장에서 중요한 판단이 왜 누락되고, 어떻게 기술과 조직을 다시 설계해야 더 나은 판단이 가능한가.",
+        "이 사이트는 완성된 이력을 전시하는 포트폴리오가 아닙니다. AI Native Healthcare에 대한 저의 living thesis입니다. 현장의 관찰이 Field Note가 되고, Essay와 Idea로 발전하며, Project와 Research에서 검증되는 과정을 공개적으로 축적합니다."
+      ],
+      "facts": [
+        [
+          "BASED IN",
+          "Seoul, Korea"
+        ],
+        [
+          "FIELD",
+          "AI Native Healthcare"
+        ],
+        [
+          "EXPERIENCE",
+          "Clinical care · Hospital operations · Digital health · AI EMR"
+        ],
+        [
+          "LANGUAGES",
+          "Korean · English · Chinese"
+        ],
+        [
+          "MISSION",
+          "Build systems that help medicine think."
+        ]
+      ]
+    },
+    "labels": {
+      "readEssay": "Read essay →",
+      "essay": "Essay",
+      "note": "Note",
+      "read": "Read →",
+      "problem": "PROBLEM",
+      "approach": "APPROACH",
+      "next": "NEXT",
+      "hypothesis": "Hypothesis.",
+      "method": "Method.",
+      "connections": "KNOWLEDGE CONNECTIONS",
+      "developingNote": "이 노트는 아직 발전 중입니다. 관련 Essay, Framework와 Project에서 주장이 수정되거나 검증될 수 있습니다.",
+      "close": "Close"
+    },
+    "footer": {
+      "line1": "A living thesis on how intelligence reshapes medicine.",
+      "line2": "Built in public, one idea at a time.",
+      "copyright": "© 2026",
+      "edit": "Edit"
+    }
+  }
+}
