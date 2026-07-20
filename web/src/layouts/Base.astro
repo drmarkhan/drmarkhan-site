@@ -30,6 +30,8 @@ function isActive(href: string) {
   if (href === '/') return path === '/'
   return path.startsWith(href)
 }
+
+const STUDIO_URL = 'https://drmarkhan.sanity.studio'
 ---
 
 <!doctype html>
@@ -62,6 +64,7 @@ function isActive(href: string) {
           }
         </nav>
         <div class="nav-end">
+          <a class="quiet-link" href={STUDIO_URL} target="_blank" rel="noopener">{site.nav?.edit}</a>
           <button class="menu" id="menuToggle"><span>{site.nav?.menu}</span></button>
         </div>
       </div>
@@ -71,6 +74,7 @@ function isActive(href: string) {
       <div class="drawer-panel">
         <button class="drawer-x" id="drawerClose">{site.nav?.close}</button>
         {navItems.map((item) => <a href={item.href}>{site.nav?.[item.key]}</a>)}
+        <a href={STUDIO_URL} target="_blank" rel="noopener">{site.nav?.editContent}</a>
       </div>
     </div>
 
@@ -89,6 +93,7 @@ function isActive(href: string) {
         </p>
         <div>
           <span>{site.footer?.copyright}</span>
+          <a href={STUDIO_URL} target="_blank" rel="noopener">{site.footer?.edit}</a>
         </div>
       </div>
     </footer>
