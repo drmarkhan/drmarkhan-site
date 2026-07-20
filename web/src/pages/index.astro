@@ -1,0 +1,152 @@
+---
+import Base from '../layouts/Base.astro'
+import {getSiteSettings, getPublishedEssays, getPublishedNotes, getConcepts} from '../lib/queries'
+
+const site = await getSiteSettings()
+const essays = await getPublishedEssays()
+const notes = await getPublishedNotes()
+const concepts = await getConcepts()
+
+const featured = essays.find((e: any) => e.featured) || essays[0]
+const otherEssays = essays.filter((e: any) => e._id !== featured?._id)
+
+const latestWriting = [
+  ...otherEssays.slice(0, 3).map((x: any) => ({...x, kind: 'essay'})),
+  ...notes.slice(0, 3).map((x: any) => ({...x, kind: 'note'})),
+]
+  .sort((a, b) => (b.publishedAt > a.publishedAt ? 1 : -1))
+  .slice(0, 5)
+
+const h = site.home || {}
+const l = site.labels || {}
+---
+
+<Base>
+  <main id="home" class="view active">
+    <section class="masthead">
+      <div class="wrap mast-grid">
+        <div>
+          <p class="overline">{h.overline}</p>
+          <h1 set:html={h.title} />
+          <p class="hero-thesis" set:html={h.thesis} />
+          <p class="intro" set:html={h.intro} />
+          <div class="mast-actions">
+            <a href="/writing">{h.primaryButton}</a>
+            <a href="/about">{h.secondaryButton}</a>
+          </div>
+        </div>
+        <aside class="current-note">
+          <span>{h.currentLabel}</span>
+          <p set:html={h.currentTitle} />
+          <small set:html={h.currentText} />
+        </aside>
+      </div>
+    </section>
+
+    <section class="feature-section">
+      <div class="wrap">
+        <div class="section-label">{h.featuredLabel}</div>
+        {
+          featured && (
+            <a class="featured" href={`/writing/${featured.slug}`}>
+              <div>
+                <div class="featured-meta">
+                  {featured.category} · {featured.publishedAt?.slice(0, 10)}
+                </div>
+              </div>
+              <div>
+                <h2>{featured.title}</h2>
+                <p>{featured.excerpt}</p>
+                <span class="read-mark">{l.readEssay}</span>
+              </div>
+            </a>
+          )
+        }
+      </div>
+    </section>
+
+    <section class="writing-section">
+      <div class="wrap two-col">
+        <div>
+          <div class="section-label">{h.latestLabel}</div>
+          <div class="writing-list">
+            {
+              latestWriting.map((item) => (
+                <a class="writing-row" href={`/writing/${item.slug}`}>
+                  <time>{item.publishedAt?.slice(0, 10).replaceAll('-', '–')}</time>
+                  <h3>{item.title}</h3>
+                  <span>
+                    {item.kind === 'essay' ? l.essay : l.note} →
+                  </span>
+                </a>
+              ))
+            }
+          </div>
+          <a class="text-cta" href="/writing">{h.allWriting}</a>
+        </div>
+        <aside class="thesis-card">
+          <span>{h.centralLabel}</span>
+          <blockquote set:html={h.centralQuestion} />
+          <p set:html={h.centralText} />
+        </aside>
+      </div>
+    </section>
+
+    <section class="themes-section">
+      <div class="wrap">
+        <div class="section-label">{h.themesLabel}</div>
+        <div class="theme-index">
+          {
+            concepts.slice(0, 6).map((c: any) => (
+              <div class="theme-row">
+                <span>{c.code}</span>
+                <b>{c.title}</b>
+                <span>{c.stage}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section">
+      <div class="wrap">
+        <div class="notes-head">
+          <div>
+            <div class="section-label">{h.notesLabel}</div>
+            <h2 set:html={h.notesTitle} />
+          </div>
+          <p set:html={h.notesText} />
+        </div>
+        <div class="note-stream">
+          {
+            notes.slice(0, 6).map((n: any) => (
+              <a class="note-cell" href={`/writing/${n.slug}`}>
+                <time>{n.publishedAt?.slice(0, 10)}</time>
+                <p>{n.title}</p>
+                <span>{n.category} →</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="timeline-section">
+      <div class="wrap">
+        <div class="section-label">{h.timelineLabel}</div>
+        <div class="timeline">
+          {
+            (site.timeline || []).map((t: any) => (
+              <div>
+                <b>{t.year}</b>
+                <span>{t.description}</span>
+              </div>
+            ))
+          }
+        </div>
+        <p class="closing-line" set:html={h.closing} />
+      </div>
+    </section>
+  </main>
+</Base>

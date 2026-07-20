@@ -1,0 +1,56 @@
+---
+import Base from '../../layouts/Base.astro'
+import {getSiteSettings, getProjects} from '../../lib/queries'
+import {portableTextToHtml} from '../../lib/portableText'
+
+const site = await getSiteSettings()
+const projects = await getProjects()
+const p = site.pages?.projects || {}
+const l = site.labels || {}
+---
+
+<Base title={p.title} description={p.description}>
+  <main id="projects" class="view active">
+    <section class="page-head">
+      <div class="wrap narrow">
+        <p class="overline">{p.overline}</p>
+        <h1 set:html={p.title} />
+        <p set:html={p.description} />
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="wrap">
+        <div id="projectList" class="case-list">
+          {
+            projects.map((proj: any) => (
+              <article class="case">
+                <div class="case-kicker">
+                  <span>{proj.area}</span>
+                  <span>{proj.status}</span>
+                </div>
+                <div>
+                  <h2>{proj.title}</h2>
+                  <p class="case-summary">{proj.subtitle}</p>
+                  <div class="case-facts">
+                    <div>
+                      <small>{l.problem}</small>
+                      <div class="rich-snippet" set:html={portableTextToHtml(proj.problem)} />
+                    </div>
+                    <div>
+                      <small>{l.approach}</small>
+                      <div class="rich-snippet" set:html={portableTextToHtml(proj.approach)} />
+                    </div>
+                    <div>
+                      <small>{l.next}</small>
+                      <div class="rich-snippet" set:html={portableTextToHtml(proj.next)} />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+</Base>

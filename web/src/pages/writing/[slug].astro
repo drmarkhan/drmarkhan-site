@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro'
+import {sanity} from '../../lib/sanity'
+import {getSiteSettings} from '../../lib/queries'
+import {portableTextToHtml} from '../../lib/portableText'
+
+export async function getStaticPaths() {
+  const articles = await sanity.fetch(
+    `*[(_type=="note" || _type=="essay") && status=="published"]{"slug": slug.current}`,
+  )
+  return articles.map((a: any) => ({params: {slug: a.slug}}))
+}
+
+const {slug} = Astro.params
+const site = await getSiteSettings()
+const article = await sanity.fetch(
+  `*[(_type=="note" || _type=="essay") && slug.current==$slug][0]`,
+  {slug},
+)
+
+if (!article) return Astro.redirect('/writing')
+
+const l = site.labels || {}
+const bodyHtml =
+  article._type === 'essay'
+    ? portableTextToHtml(article.body)
+    : `<p>${article.excerpt}</p><p>${l.developingNote || ''}</p>`
+
+const pills = [...(article.ideaTags || []), ...(article.workTags || []), ...(article.researchTags || [])]
+---
+
+<Base title={article.seoTitle || article.title} description={article.seoDescription || article.excerpt}>
+  <main class="view active">
+    <article class="reader" style="margin: 40px auto;">
+      <div class="eyebrow">
+        {article.category} · {article.publishedAt?.slice(0, 10)}
+      </div>
+      <h1>{article.title}</h1>
+      <p class="dek">{article.excerpt}</p>
+      <div class="prose" set:html={bodyHtml} />
+      {
+        pills.length > 0 && (
+          <div class="connections">
+            <b>{l.connections}</b>
+            <div>
+              {pills.map((tag) => (
+                <span class="pill">{tag}</span>
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </article>
+  </main>
+</Base>

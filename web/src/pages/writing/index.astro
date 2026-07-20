@@ -1,0 +1,87 @@
+---
+import Base from '../../layouts/Base.astro'
+import {getSiteSettings, getPublishedEssays, getPublishedNotes} from '../../lib/queries'
+
+const site = await getSiteSettings()
+const essays = await getPublishedEssays()
+const notes = await getPublishedNotes()
+const p = site.pages?.journal || {}
+const l = site.labels || {}
+
+const items = [
+  ...essays.map((x: any) => ({...x, kind: 'essay'})),
+  ...notes.map((x: any) => ({...x, kind: 'note'})),
+].sort((a, b) => (b.publishedAt > a.publishedAt ? 1 : -1))
+---
+
+<Base title={p.title} description={p.description}>
+  <main id="journal" class="view active">
+    <section class="page-head">
+      <div class="wrap narrow">
+        <p class="overline">{p.overline}</p>
+        <h1 set:html={p.title} />
+        <p set:html={p.description} />
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="wrap">
+        <div class="journal-tools">
+          <input id="search" placeholder={p.search} />
+          <div class="filters">
+            <button class="filter active" data-mode="all">{p.all}</button>
+            <button class="filter" data-mode="essay">{p.essays}</button>
+            <button class="filter" data-mode="note">{p.notes}</button>
+          </div>
+        </div>
+        <div id="journalGrid" class="archive-list">
+          {
+            items.map((x) => (
+              <a
+                class="archive-item"
+                href={`/writing/${x.slug}`}
+                data-kind={x.kind}
+                data-text={`${x.title} ${x.excerpt}`.toLowerCase()}
+              >
+                <div class="meta">
+                  {x.publishedAt?.slice(0, 10)}
+                  <br />
+                  {x.category}
+                </div>
+                <div>
+                  <h2>{x.title}</h2>
+                  <p>{x.excerpt}</p>
+                </div>
+                <div class="arrow">{l.read}</div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const search = document.getElementById('search') as HTMLInputElement
+    const filters = document.querySelectorAll<HTMLButtonElement>('.filter')
+    const items = document.querySelectorAll<HTMLElement>('#journalGrid > *')
+    let mode = 'all'
+
+    function apply() {
+      const q = search.value.trim().toLowerCase()
+      items.forEach((item) => {
+        const matchesMode = mode === 'all' || item.dataset.kind === mode
+        const matchesQuery = !q || (item.dataset.text || '').includes(q)
+        item.style.display = matchesMode && matchesQuery ? '' : 'none'
+      })
+    }
+
+    filters.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        mode = btn.dataset.mode || 'all'
+        filters.forEach((b) => b.classList.toggle('active', b === btn))
+        apply()
+      })
+    })
+    search?.addEventListener('input', apply)
+  </script>
+</Base>

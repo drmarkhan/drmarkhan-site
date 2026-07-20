@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro'
+import {getSiteSettings, getResearchQuestions} from '../../lib/queries'
+import {portableTextToHtml} from '../../lib/portableText'
+
+const site = await getSiteSettings()
+const research = await getResearchQuestions()
+const p = site.pages?.research || {}
+const l = site.labels || {}
+---
+
+<Base title={p.title} description={p.description}>
+  <main id="research" class="view active">
+    <section class="page-head">
+      <div class="wrap narrow">
+        <p class="overline">{p.overline}</p>
+        <h1 set:html={p.title} />
+        <p set:html={p.description} />
+      </div>
+    </section>
+    <section class="content-section">
+      <div class="wrap narrow" id="researchList">
+        {
+          research.map((r: any) => (
+            <article class="research-piece">
+              <header>
+                <div>
+                  <span class="state">{r.stage}</span>
+                  <h2>{r.question}</h2>
+                </div>
+                <span class="percent">{r.percent}%</span>
+              </header>
+              <div class="research-rich">
+                <b>{l.hypothesis}</b>
+                <Fragment set:html={portableTextToHtml(r.hypothesis)} />
+              </div>
+              <div class="research-rich">
+                <b>{l.method}</b>
+                <Fragment set:html={portableTextToHtml(r.method)} />
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Base>

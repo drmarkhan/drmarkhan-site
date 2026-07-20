@@ -207,6 +207,37 @@ for (const item of source.research || []) {
   })
 }
 
+// --- site settings (singleton) ---
+if (source.site) {
+  const s = source.site
+  docs.push({
+    _id: 'siteSettings',
+    _type: 'siteSettings',
+    meta: s.meta,
+    brand: s.brand,
+    nav: s.nav,
+    home: s.home,
+    timeline: (s.timeline || []).map(([year, description]) => ({
+      _type: 'timelineItem',
+      _key: key(),
+      year,
+      description,
+    })),
+    pages: s.pages,
+    about: {
+      paragraphs: s.about?.paragraphs || [],
+      facts: (s.about?.facts || []).map(([label, value]) => ({
+        _type: 'fact',
+        _key: key(),
+        label,
+        value,
+      })),
+    },
+    labels: s.labels,
+    footer: s.footer,
+  })
+}
+
 const ndjson = docs.map((d) => JSON.stringify(d)).join('\n') + '\n'
 writeFileSync(new URL('./posts.ndjson', import.meta.url), ndjson)
 
@@ -217,9 +248,9 @@ const counts = {
   projects: (source.projects || []).length,
   research: (source.research || []).length,
 }
-const total = Object.values(counts).reduce((a, b) => a + b, 0)
+const total = Object.values(counts).reduce((a, b) => a + b, 0) + (source.site ? 1 : 0)
 
-console.log('변환 완료:', JSON.stringify(counts))
+console.log('변환 완료:', JSON.stringify(counts), '+ siteSettings')
 console.log('원본 총 개수:', total, '/ 생성된 문서 수:', docs.length)
 if (warnings.length) {
   console.log(`\n경고 ${warnings.length}건:`)

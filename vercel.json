@@ -1,9 +1,5 @@
 {
-  "cleanUrls": true,
-  "headers": [
-    {
-      "source": "/published-content.json",
-      "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }]
-    }
-  ]
+  "buildCommand": "cd web && npm install && npm run build",
+  "outputDirectory": "web/dist",
+  "cleanUrls": true
 }
