@@ -24,6 +24,7 @@ const navItems = [
   {href: '/work', key: 'projects'},
   {href: '/research', key: 'research'},
   {href: '/about', key: 'about'},
+  {href: '/opic/', key: 'study'},
 ]
 
 function isActive(href: string) {
@@ -56,7 +57,7 @@ function isActive(href: string) {
           {
             navItems.map((item) => (
               <a class:list={[{active: isActive(item.href)}]} href={item.href}>
-                <span>{site.nav?.[item.key]}</span>
+                <span>{item.key === 'study' ? 'Study' : site.nav?.[item.key]}</span>
               </a>
             ))
           }
@@ -70,7 +71,7 @@ function isActive(href: string) {
     <div id="drawer" class="drawer">
       <div class="drawer-panel">
         <button class="drawer-x" id="drawerClose">{site.nav?.close}</button>
-        {navItems.map((item) => <a href={item.href}>{site.nav?.[item.key]}</a>)}
+        {navItems.map((item) => <a href={item.href}>{item.key === 'study' ? 'Study' : site.nav?.[item.key]}</a>)}
       </div>
     </div>
 
